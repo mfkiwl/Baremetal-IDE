@@ -6,7 +6,7 @@
 
 TARGET ?= firmware
 
-CHIP ?= bearlyml
+CHIP ?= examplechip
 
 #################################
 # RISCV Toolchain
@@ -44,6 +44,7 @@ BUILD_DIR = build/
 ifeq ($(USE_HTIF), 1)
 LIBRARIES += htif
 endif
+LIBRARIES += freertos
 
 # USR sources
 INCLUDES   = -I$(INC_DIR)
